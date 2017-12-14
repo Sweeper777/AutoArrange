@@ -1,0 +1,6 @@
+framework module Pods_AutoArrange {
+  umbrella header "Pods-AutoArrange-umbrella.h"
+
+  export *
+  module * { export * }
+}
