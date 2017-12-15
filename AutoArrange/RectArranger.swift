@@ -19,6 +19,7 @@ class RectArranger {
             return 0
         }
     }
+    
     func getPossiblePlaces() -> [CGPoint] {
         let possiblePlaces = (arrangedRects.flatMap { [
             CGPoint(x: $0.minX, y: $0.maxY),
@@ -34,5 +35,30 @@ class RectArranger {
                 return true
         }
         return possiblePlaces
+    }
+    
+    func minimax(depth: Int) -> (origin: CGPoint, score: Double) {
+        var bestScore = Double.infinity
+        var currentScore: Double
+        var bestPoint: CGPoint?
+        if rectsToBeArranged.isEmpty || depth == 0 {
+            bestScore = evaluateHeuristics()
+        } else {
+            let possiblePlaces = getPossiblePlaces()
+            for point in possiblePlaces {
+                arrangedRects.rects.append(CGRect(origin: point, size: self.rectsToBeArranged.first!.size))
+                let triedRect = self.rectsToBeArranged.removeFirst()
+                
+                currentScore = minimax(depth: depth - 1).score
+                if currentScore < bestScore {
+                    bestScore = currentScore
+                    bestPoint = point
+                }
+                
+                arrangedRects.rects.removeLast()
+                rectsToBeArranged.insert(triedRect, at: 0)
+            }
+        }
+        return (bestPoint ?? .zero, bestScore)
     }
 }
