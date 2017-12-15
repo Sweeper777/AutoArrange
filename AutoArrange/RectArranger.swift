@@ -61,4 +61,22 @@ class RectArranger {
         }
         return (bestPoint ?? .zero, bestScore)
     }
+    
+    func arrange() {
+        rectsToBeArranged.sort { (a, b) -> Bool in
+            let aArea = a.size.width * a.size.height
+            let bArea = b.size.width * b.size.height
+            return aArea > bArea
+        }
+        arrangedRects.rects.append(CGRect(origin: .zero, size: rectsToBeArranged.first!.size))
+        rectsToBeArranged.removeFirst()
+        while !rectsToBeArranged.isEmpty {
+            let point = minimax(depth: 2).origin
+            arrangedRects.rects.append(CGRect(origin: point, size: rectsToBeArranged.first!.size))
+            let placedRect = rectsToBeArranged.removeFirst()
+            let area = placedRect.size.width * placedRect.size.height
+            print("Rect Placed")
+            print("Area: \(area)")
+        }
+    }
 }
