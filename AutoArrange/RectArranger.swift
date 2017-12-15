@@ -19,4 +19,20 @@ class RectArranger {
             return 0
         }
     }
+    func getPossiblePlaces() -> [CGPoint] {
+        let possiblePlaces = (arrangedRects.flatMap { [
+            CGPoint(x: $0.minX, y: $0.maxY),
+            CGPoint(x: $0.maxX, y: $0.minY),
+            ] })
+            .filter { (point) -> Bool in
+                let newRect = CGRect(origin: point, size: self.rectsToBeArranged.first!.size)
+                for rect in self.arrangedRects {
+                    if rect.intersects(newRect) || point.x < 0 || point.y < 0 {
+                        return false
+                    }
+                }
+                return true
+        }
+        return possiblePlaces
+    }
 }
