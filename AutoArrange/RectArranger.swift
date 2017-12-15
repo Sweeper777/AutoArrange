@@ -10,4 +10,13 @@ class RectArranger {
         self.idealRatio = idealRatio
     }
     
+    func evaluateHeuristics() -> Double {
+        if let maxX = (arrangedRects.map { $0.maxX }).max(), let maxY = (arrangedRects.map { $0.maxY }).max() {
+            let currentRatio = Double(maxX / maxY)
+            let percentageError = (abs(currentRatio - idealRatio)) / idealRatio
+            return percentageError
+        } else {
+            return 0
+        }
+    }
 }
