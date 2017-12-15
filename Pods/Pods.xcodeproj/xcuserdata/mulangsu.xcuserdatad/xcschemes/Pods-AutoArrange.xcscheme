@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0910"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D229AFC484474E8B11337FF4968319D"
+               BlueprintIdentifier = "5FC386CF4FD9E74F9D576217833791A5"
                BuildableName = "Pods_AutoArrange.framework"
                BlueprintName = "Pods-AutoArrange"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5D229AFC484474E8B11337FF4968319D"
+            BlueprintIdentifier = "5FC386CF4FD9E74F9D576217833791A5"
             BuildableName = "Pods_AutoArrange.framework"
             BlueprintName = "Pods-AutoArrange"
             ReferencedContainer = "container:Pods.xcodeproj">

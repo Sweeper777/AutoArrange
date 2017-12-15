@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		42E2C4A8B779DA011F53AC43 /* Pods_AutoArrange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D79C74B7F936CAADAF75DEE /* Pods_AutoArrange.framework */; };
+		5A365E501FE263C300B893DD /* RectCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A365E4F1FE263C300B893DD /* RectCollection.swift */; };
+		5A365E521FE2641300B893DD /* RectArranger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A365E511FE2641300B893DD /* RectArranger.swift */; };
 		5A3C28B81FE1B62B0073C8E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C28B71FE1B62B0073C8E4 /* AppDelegate.swift */; };
 		5A3C28BA1FE1B62B0073C8E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C28B91FE1B62B0073C8E4 /* ViewController.swift */; };
 		5A3C28BD1FE1B62B0073C8E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3C28BB1FE1B62B0073C8E4 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		1F22FD8862B0588C742D783B /* Pods-AutoArrange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoArrange.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoArrange/Pods-AutoArrange.release.xcconfig"; sourceTree = "<group>"; };
+		5A365E4F1FE263C300B893DD /* RectCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectCollection.swift; sourceTree = "<group>"; };
+		5A365E511FE2641300B893DD /* RectArranger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectArranger.swift; sourceTree = "<group>"; };
 		5A3C28B41FE1B62B0073C8E4 /* AutoArrange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoArrange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3C28B71FE1B62B0073C8E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A3C28B91FE1B62B0073C8E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				5A3C28BE1FE1B62B0073C8E4 /* Assets.xcassets */,
 				5A3C28C01FE1B62B0073C8E4 /* LaunchScreen.storyboard */,
 				5A3C28C31FE1B62B0073C8E4 /* Info.plist */,
+				5A365E4F1FE263C300B893DD /* RectCollection.swift */,
+				5A365E511FE2641300B893DD /* RectArranger.swift */,
 			);
 			path = AutoArrange;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView-Objective-C/SCLAlertView_Objective_C.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/TLPhotoPicker/TLPhotoPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/UIView+draggable/UIView_draggable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -219,6 +226,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView_Objective_C.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TLPhotoPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIView_draggable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A3C28BA1FE1B62B0073C8E4 /* ViewController.swift in Sources */,
+				5A365E521FE2641300B893DD /* RectArranger.swift in Sources */,
+				5A365E501FE263C300B893DD /* RectCollection.swift in Sources */,
 				5A3C28B81FE1B62B0073C8E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E9MW74DJ4Y;
 				INFOPLIST_FILE = AutoArrange/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.AutoArrange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,7 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E9MW74DJ4Y;
 				INFOPLIST_FILE = AutoArrange/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.AutoArrange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
