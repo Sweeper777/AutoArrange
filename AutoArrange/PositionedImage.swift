@@ -9,6 +9,12 @@ struct PositionedImage: Codable {
         self.rect = rect
     }
     
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        image = try UIImage(data: container.decode(Data.self, forKey: .image))!
+        rect = try container.decode(CGRect.self, forKey: .rect)
+    }
+    
     
     enum CodingKeys: CodingKey {
         case image
