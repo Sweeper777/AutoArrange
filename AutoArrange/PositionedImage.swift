@@ -15,6 +15,11 @@ struct PositionedImage: Codable {
         rect = try container.decode(CGRect.self, forKey: .rect)
     }
     
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(UIImagePNGRepresentation(image), forKey: .image)
+        try container.encode(rect, forKey: .rect)
+    }
     
     enum CodingKeys: CodingKey {
         case image
