@@ -9,4 +9,9 @@ struct PositionedImage: Codable {
         self.rect = rect
     }
     
+    
+    enum CodingKeys: CodingKey {
+        case image
+        case rect
+    }
 }
