@@ -3,10 +3,12 @@ import UIKit
 struct PositionedImage: Codable {
     let image: UIImage
     var rect: CGRect
+    var scaleFactor: Double
     
-    init(image: UIImage, rect: CGRect) {
+    init(image: UIImage, rect: CGRect, scaleFactor: Double) {
         self.image = image
         self.rect = rect
+        self.scaleFactor = scaleFactor
     }
     
     init(from decoder: Decoder) throws {
