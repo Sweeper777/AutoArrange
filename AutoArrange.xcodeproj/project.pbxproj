@@ -8,19 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		42E2C4A8B779DA011F53AC43 /* Pods_AutoArrange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D79C74B7F936CAADAF75DEE /* Pods_AutoArrange.framework */; };
-		5A365E501FE263C300B893DD /* RectCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A365E4F1FE263C300B893DD /* RectCollection.swift */; };
+		5A365E501FE263C300B893DD /* PositionedImageCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A365E4F1FE263C300B893DD /* PositionedImageCollection.swift */; };
 		5A365E521FE2641300B893DD /* RectArranger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A365E511FE2641300B893DD /* RectArranger.swift */; };
+		5A3AC97D1FEB93CC00713CCA /* Arrangement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3AC97C1FEB93CC00713CCA /* Arrangement.swift */; };
+		5A3AC97F1FEB95AD00713CCA /* PositionedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3AC97E1FEB95AC00713CCA /* PositionedImage.swift */; };
 		5A3C28B81FE1B62B0073C8E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C28B71FE1B62B0073C8E4 /* AppDelegate.swift */; };
 		5A3C28BA1FE1B62B0073C8E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C28B91FE1B62B0073C8E4 /* ViewController.swift */; };
 		5A3C28BD1FE1B62B0073C8E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3C28BB1FE1B62B0073C8E4 /* Main.storyboard */; };
 		5A3C28BF1FE1B62B0073C8E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3C28BE1FE1B62B0073C8E4 /* Assets.xcassets */; };
 		5A3C28C21FE1B62B0073C8E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3C28C01FE1B62B0073C8E4 /* LaunchScreen.storyboard */; };
+		5A43C2371FEDDC4200FD5302 /* MySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A43C2361FEDDC4200FD5302 /* MySplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F22FD8862B0588C742D783B /* Pods-AutoArrange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoArrange.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoArrange/Pods-AutoArrange.release.xcconfig"; sourceTree = "<group>"; };
-		5A365E4F1FE263C300B893DD /* RectCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectCollection.swift; sourceTree = "<group>"; };
+		5A365E4F1FE263C300B893DD /* PositionedImageCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionedImageCollection.swift; sourceTree = "<group>"; };
 		5A365E511FE2641300B893DD /* RectArranger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectArranger.swift; sourceTree = "<group>"; };
+		5A3AC97C1FEB93CC00713CCA /* Arrangement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrangement.swift; sourceTree = "<group>"; };
+		5A3AC97E1FEB95AC00713CCA /* PositionedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionedImage.swift; sourceTree = "<group>"; };
 		5A3C28B41FE1B62B0073C8E4 /* AutoArrange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoArrange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3C28B71FE1B62B0073C8E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A3C28B91FE1B62B0073C8E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +33,7 @@
 		5A3C28BE1FE1B62B0073C8E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A3C28C11FE1B62B0073C8E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A3C28C31FE1B62B0073C8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A43C2361FEDDC4200FD5302 /* MySplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySplitViewController.swift; sourceTree = "<group>"; };
 		8D79C74B7F936CAADAF75DEE /* Pods_AutoArrange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoArrange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61CBA82713AF7BAA24F2814 /* Pods-AutoArrange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoArrange.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoArrange/Pods-AutoArrange.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,12 +81,15 @@
 			children = (
 				5A3C28B71FE1B62B0073C8E4 /* AppDelegate.swift */,
 				5A3C28B91FE1B62B0073C8E4 /* ViewController.swift */,
+				5A43C2361FEDDC4200FD5302 /* MySplitViewController.swift */,
 				5A3C28BB1FE1B62B0073C8E4 /* Main.storyboard */,
 				5A3C28BE1FE1B62B0073C8E4 /* Assets.xcassets */,
 				5A3C28C01FE1B62B0073C8E4 /* LaunchScreen.storyboard */,
 				5A3C28C31FE1B62B0073C8E4 /* Info.plist */,
-				5A365E4F1FE263C300B893DD /* RectCollection.swift */,
+				5A3AC97E1FEB95AC00713CCA /* PositionedImage.swift */,
+				5A365E4F1FE263C300B893DD /* PositionedImageCollection.swift */,
 				5A365E511FE2641300B893DD /* RectArranger.swift */,
+				5A3AC97C1FEB93CC00713CCA /* Arrangement.swift */,
 			);
 			path = AutoArrange;
 			sourceTree = "<group>";
@@ -243,7 +252,10 @@
 			files = (
 				5A3C28BA1FE1B62B0073C8E4 /* ViewController.swift in Sources */,
 				5A365E521FE2641300B893DD /* RectArranger.swift in Sources */,
-				5A365E501FE263C300B893DD /* RectCollection.swift in Sources */,
+				5A43C2371FEDDC4200FD5302 /* MySplitViewController.swift in Sources */,
+				5A365E501FE263C300B893DD /* PositionedImageCollection.swift in Sources */,
+				5A3AC97F1FEB95AD00713CCA /* PositionedImage.swift in Sources */,
+				5A3AC97D1FEB93CC00713CCA /* Arrangement.swift in Sources */,
 				5A3C28B81FE1B62B0073C8E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
