@@ -1,17 +1,18 @@
 import CoreGraphics
+import SwiftyUtils
 
 class RectArranger {
-    var rectsToBeArranged: [CGRect]
-    var arrangedRects = RectCollection(rects: [])
+    var imagesToBeArranged: PositionedImageCollection
+    var arrangedImages = PositionedImageCollection(images: [])
     let idealRatio: Double
     
-    init(rects: [CGRect], idealRatio: Double = 1 / sqrt(2)) {
-        self.rectsToBeArranged = rects
+    init(rects: PositionedImageCollection, idealRatio: Double = 1 / sqrt(2)) {
+        self.imagesToBeArranged = rects
         self.idealRatio = idealRatio
     }
     
     func evaluateHeuristics() -> Double {
-        if let maxX = (arrangedRects.map { $0.maxX }).max(), let maxY = (arrangedRects.map { $0.maxY }).max() {
+        if let maxX = (arrangedImages.map { $0.rect.maxX }).max(), let maxY = (arrangedImages.map { $0.rect.maxY }).max() {
             let currentRatio = Double(maxX / maxY)
             let percentageError = (abs(currentRatio - idealRatio)) / idealRatio
             return percentageError
@@ -21,14 +22,14 @@ class RectArranger {
     }
     
     func getPossiblePlaces() -> [CGPoint] {
-        let possiblePlaces = (arrangedRects.flatMap { [
-            CGPoint(x: $0.minX, y: $0.maxY),
-            CGPoint(x: $0.maxX, y: $0.minY),
+        let possiblePlaces = (arrangedImages.flatMap { [
+            CGPoint(x: $0.rect.minX, y: $0.rect.maxY),
+            CGPoint(x: $0.rect.maxX, y: $0.rect.minY),
             ] })
             .filter { (point) -> Bool in
-                let newRect = CGRect(origin: point, size: self.rectsToBeArranged.first!.size)
-                for rect in self.arrangedRects {
-                    if rect.intersects(newRect) || point.x < 0 || point.y < 0 {
+                let newRect = CGRect(origin: point, size: self.imagesToBeArranged.images.first!.rect.size)
+                for image in self.arrangedImages {
+                    if image.rect.intersects(newRect) || point.x < 0 || point.y < 0 {
                         return false
                     }
                 }
@@ -41,13 +42,15 @@ class RectArranger {
         var bestScore = Double.infinity
         var currentScore: Double
         var bestPoint: CGPoint?
-        if rectsToBeArranged.isEmpty || depth == 0 {
+        if imagesToBeArranged.images.isEmpty || depth == 0 {
             bestScore = evaluateHeuristics()
         } else {
             let possiblePlaces = getPossiblePlaces()
             for point in possiblePlaces {
-                arrangedRects.rects.append(CGRect(origin: point, size: self.rectsToBeArranged.first!.size))
-                let triedRect = self.rectsToBeArranged.removeFirst()
+                var newImage = self.imagesToBeArranged.images.first!
+                newImage.rect = newImage.rect.with(origin: point)
+                arrangedImages.images.append(newImage)
+                let triedImage = self.imagesToBeArranged.images.removeFirst()
                 
                 currentScore = minimax(depth: depth - 1).score
                 if currentScore < bestScore {
@@ -55,26 +58,30 @@ class RectArranger {
                     bestPoint = point
                 }
                 
-                arrangedRects.rects.removeLast()
-                rectsToBeArranged.insert(triedRect, at: 0)
+                arrangedImages.images.removeLast()
+                imagesToBeArranged.images.insert(triedImage, at: 0)
             }
         }
         return (bestPoint ?? .zero, bestScore)
     }
     
     func arrange() {
-        rectsToBeArranged.sort { (a, b) -> Bool in
-            let aArea = a.size.width * a.size.height
-            let bArea = b.size.width * b.size.height
+        imagesToBeArranged.images.sort { (a, b) -> Bool in
+            let aArea = a.rect.width * a.rect.height
+            let bArea = b.rect.width * b.rect.height
             return aArea > bArea
         }
-        arrangedRects.rects.append(CGRect(origin: .zero, size: rectsToBeArranged.first!.size))
-        rectsToBeArranged.removeFirst()
-        while !rectsToBeArranged.isEmpty {
+        var newImage = imagesToBeArranged.images.first!
+        newImage.rect = newImage.rect.with(origin: .zero)
+        arrangedImages.images.append(newImage)
+        imagesToBeArranged.images.removeFirst()
+        while !imagesToBeArranged.images.isEmpty {
             let point = minimax(depth: 2).origin
-            arrangedRects.rects.append(CGRect(origin: point, size: rectsToBeArranged.first!.size))
-            let placedRect = rectsToBeArranged.removeFirst()
-            let area = placedRect.size.width * placedRect.size.height
+            var newImage = imagesToBeArranged.images.first!
+            newImage.rect = newImage.rect.with(origin: point)
+            arrangedImages.images.append(newImage)
+            let placedRect = imagesToBeArranged.images.removeFirst()
+            let area = placedRect.rect.width * placedRect.rect.height
             print("Rect Placed")
             print("Area: \(area)")
         }
