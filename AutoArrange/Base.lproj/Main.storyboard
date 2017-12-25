@@ -28,7 +28,7 @@
         <!--Arrangements-->
         <scene sceneID="sYJ-XF-jSx">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="dVA-JU-Jxh" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="dVA-JU-Jxh" customClass="ArrangementsController" customModule="AutoArrange" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="THc-U0-vZw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,14 @@
                             <outlet property="delegate" destination="dVA-JU-Jxh" id="c7n-ZM-Xjw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Arrangements" id="wTD-dq-DL7"/>
+                    <navigationItem key="navigationItem" title="Arrangements" id="wTD-dq-DL7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="coG-l6-Ptd">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="newArrangement" destination="dVA-JU-Jxh" id="NA0-PJ-YHS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="3Is-Sm-5mO" kind="showDetail" id="miq-ol-Juj"/>
                     </connections>
@@ -92,6 +99,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fQa-qy-d7p"/>
+        <segue reference="miq-ol-Juj"/>
     </inferredMetricsTieBreakers>
 </document>
