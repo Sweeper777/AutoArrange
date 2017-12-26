@@ -58,11 +58,48 @@
                     </navigationItem>
                     <connections>
                         <segue destination="3Is-Sm-5mO" kind="showDetail" id="miq-ol-Juj"/>
+                        <segue destination="GGh-6N-Xbi" kind="presentation" identifier="showArrangementEditor" modalPresentationStyle="formSheet" id="qW0-Fw-cjm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1oj-BC-VHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1089" y="-117"/>
+        </scene>
+        <!--Data Passer Controller-->
+        <scene sceneID="7t5-4R-nva">
+            <objects>
+                <navigationController id="GGh-6N-Xbi" customClass="DataPasserController" customModule="AutoArrange" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q8g-Ne-bNP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="51i-FT-4It" kind="relationship" relationship="rootViewController" id="Gbx-xh-fe6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVX-D0-SWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039" y="-117"/>
+        </scene>
+        <!--New Arrangement-->
+        <scene sceneID="jGo-Pb-Ved">
+            <objects>
+                <viewController id="51i-FT-4It" customClass="ArrangementEditorController" customModule="AutoArrange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c3u-dV-vU6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7v9-cf-KmC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Arrangement" id="jxz-IP-Zkn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUX-Eq-HP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2844" y="-117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JQB-Jh-2FU">
