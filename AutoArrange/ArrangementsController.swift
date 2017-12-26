@@ -2,6 +2,8 @@ import UIKit
 import TLPhotoPicker
 
 class ArrangementsController: UITableViewController, TLPhotosPickerViewControllerDelegate {
+    
+    var selectedImages: [UIImage]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +24,17 @@ class ArrangementsController: UITableViewController, TLPhotosPickerViewControlle
     }
     
     func dismissPhotoPicker(withTLPHAssets: [TLPHAsset]) {
-        
+        selectedImages = withTLPHAssets.map { $0.fullResolutionImage! }
     }
     
     func dismissComplete() {
-        
+        performSegue(withIdentifier: "showArrangementEditor", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? DataPasserController {
+            vc.selectedImages = self.selectedImages
+        }
     }
 }
 
