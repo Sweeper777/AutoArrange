@@ -13,6 +13,12 @@ class ArrangementEditorController : FormViewController {
             row.title = NSLocalizedString("Name", comment: "")
             row.placeholder = NSLocalizedString("Unnamed", comment: "")
         }
+        <<< DecimalRow(tagMargin) {
+            row in
+            row.title = NSLocalizedString("Margin (px)", comment: "")
+            row.placeholder = "5.0"
+        }
+        
     }
     
     @IBAction func cancel() {
