@@ -19,6 +19,9 @@ class ArrangementEditorController : FormViewController {
             row.placeholder = "5.0"
         }
         
+        for image in images {
+            form +++ Section()
+        }
     }
     
     @IBAction func cancel() {
