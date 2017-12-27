@@ -95,7 +95,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7v9-cf-KmC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Arrangement" id="jxz-IP-Zkn"/>
+                    <navigationItem key="navigationItem" title="New Arrangement" id="jxz-IP-Zkn">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="a9b-s1-z6N">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancel" destination="51i-FT-4It" id="k2m-Hb-GGV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Arrange" style="done" id="wYx-CQ-Ha2">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUX-Eq-HP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
