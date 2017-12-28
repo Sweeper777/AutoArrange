@@ -20,6 +20,7 @@
 		5A43C2371FEDDC4200FD5302 /* MySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A43C2361FEDDC4200FD5302 /* MySplitViewController.swift */; };
 		5A48AD421FF1D33B0004C87E /* DataPasserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A48AD411FF1D33B0004C87E /* DataPasserController.swift */; };
 		5A48AD441FF1D3F00004C87E /* ArrangemenEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A48AD431FF1D3F00004C87E /* ArrangemenEditorController.swift */; };
+		5A4CBBEB1FF31F9100AE7218 /* FormTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4CBBEA1FF31F9100AE7218 /* FormTags.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		5A43C2361FEDDC4200FD5302 /* MySplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySplitViewController.swift; sourceTree = "<group>"; };
 		5A48AD411FF1D33B0004C87E /* DataPasserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPasserController.swift; sourceTree = "<group>"; };
 		5A48AD431FF1D3F00004C87E /* ArrangemenEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrangemenEditorController.swift; sourceTree = "<group>"; };
+		5A4CBBEA1FF31F9100AE7218 /* FormTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTags.swift; sourceTree = "<group>"; };
 		8D79C74B7F936CAADAF75DEE /* Pods_AutoArrange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoArrange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61CBA82713AF7BAA24F2814 /* Pods-AutoArrange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoArrange.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoArrange/Pods-AutoArrange.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				5A365E4F1FE263C300B893DD /* PositionedImageCollection.swift */,
 				5A365E511FE2641300B893DD /* RectArranger.swift */,
 				5A3AC97C1FEB93CC00713CCA /* Arrangement.swift */,
+				5A4CBBEA1FF31F9100AE7218 /* FormTags.swift */,
 			);
 			path = AutoArrange;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/TLPhotoPicker/TLPhotoPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/UIView+draggable/UIView_draggable.framework",
+				"${BUILT_PRODUCTS_DIR}/ViewRow/ViewRow.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -243,6 +247,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TLPhotoPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIView_draggable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewRow.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -264,6 +269,7 @@
 				5A48AD421FF1D33B0004C87E /* DataPasserController.swift in Sources */,
 				5A3AC97D1FEB93CC00713CCA /* Arrangement.swift in Sources */,
 				5A3C28B81FE1B62B0073C8E4 /* AppDelegate.swift in Sources */,
+				5A4CBBEB1FF31F9100AE7218 /* FormTags.swift in Sources */,
 				5A48AD441FF1D3F00004C87E /* ArrangemenEditorController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

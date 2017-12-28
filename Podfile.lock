@@ -13,6 +13,8 @@ PODS:
   - SwiftyUtils (2.0.0)
   - TLPhotoPicker (1.3.7)
   - UIView+draggable (1.1.0)
+  - ViewRow (0.2.0):
+    - Eureka (>= 4.0.0)
 
 DEPENDENCIES:
   - Eureka
@@ -24,6 +26,16 @@ DEPENDENCIES:
   - SwiftyUtils
   - TLPhotoPicker
   - UIView+draggable
+  - ViewRow (from `https://github.com/EurekaCommunity/ViewRow`)
+
+EXTERNAL SOURCES:
+  ViewRow:
+    :git: https://github.com/EurekaCommunity/ViewRow
+
+CHECKOUT OPTIONS:
+  ViewRow:
+    :commit: f6518ba4224e33f168b89dc30b6d8ec3ba1a8c77
+    :git: https://github.com/EurekaCommunity/ViewRow
 
 SPEC CHECKSUMS:
   Eureka: c8bd5cc07143b6f66268c208d28a246c99b41955
@@ -36,7 +48,8 @@ SPEC CHECKSUMS:
   SwiftyUtils: ae914aa96b5672e9282904771e5e5b44d2e307d6
   TLPhotoPicker: 5df5d11548fdaeaf43816668a06dbc920d967d35
   UIView+draggable: ddfbeb6bdfdeba63d9ccf32dc9be2b66cc589717
+  ViewRow: 14475b337be9748b12a6df33d0a160bd5bd7765c
 
-PODFILE CHECKSUM: 503383d1f1419b5079e1258246fbf21143da5946
+PODFILE CHECKSUM: a6409ba39e7a4d73973967ec77663380f3b2619b
 
 COCOAPODS: 1.3.1

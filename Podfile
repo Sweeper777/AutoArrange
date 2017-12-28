@@ -14,4 +14,5 @@ target 'AutoArrange' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'TLPhotoPicker'
+  pod 'ViewRow', :git => 'https://github.com/EurekaCommunity/ViewRow'
 end
