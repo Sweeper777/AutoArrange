@@ -1,5 +1,6 @@
 import UIKit
 import Eureka
+import ViewRow
 
 class ArrangementEditorController : FormViewController {
     var images: [UIImage]!
@@ -19,8 +20,18 @@ class ArrangementEditorController : FormViewController {
             row.placeholder = "5.0"
         }
         
-        for image in images {
+        for (index, image) in self.images.enumerated() {
             form +++ Section()
+            <<< ViewRow() {
+                row in
+            }.cellSetup { (cell, row) in
+                let imageView = UIImageView(image: image)
+                imageView.contentMode = .scaleAspectFit
+                cell.view = imageView
+                cell.contentView.addSubview(cell.view!)
+                
+                cell.height = { 200 }
+            }
         }
     }
     
