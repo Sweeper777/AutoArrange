@@ -32,6 +32,12 @@ class ArrangementEditorController : FormViewController {
                 
                 cell.height = { 200 }
             }
+            <<< DecimalRow(tagScaleFactor + String(index)) {
+                row in
+                row.value = 1
+                row.placeholder = "1.0"
+                row.title = NSLocalizedString("Scale Factor", comment: "")
+            }
         }
     }
     
