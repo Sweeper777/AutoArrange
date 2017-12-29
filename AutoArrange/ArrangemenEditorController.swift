@@ -20,6 +20,13 @@ class ArrangementEditorController : FormViewController {
             row.placeholder = "5.0"
         }
         
+        <<< SegmentedRow<WHRatios>(tagWHRatio) {
+            row in
+            row.options = [.landscape, .portrait]
+            row.value = .portrait
+            row.title = NSLocalizedString("Orientation", comment: "")
+        }
+        
         for (index, image) in self.images.enumerated() {
             form +++ Section()
             <<< ViewRow() {
