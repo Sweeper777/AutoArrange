@@ -17,6 +17,7 @@
 		5A3C28BD1FE1B62B0073C8E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3C28BB1FE1B62B0073C8E4 /* Main.storyboard */; };
 		5A3C28BF1FE1B62B0073C8E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3C28BE1FE1B62B0073C8E4 /* Assets.xcassets */; };
 		5A3C28C21FE1B62B0073C8E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3C28C01FE1B62B0073C8E4 /* LaunchScreen.storyboard */; };
+		5A42A8651FF47E3700EBE13B /* WHRatios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A42A8641FF47E3700EBE13B /* WHRatios.swift */; };
 		5A43C2371FEDDC4200FD5302 /* MySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A43C2361FEDDC4200FD5302 /* MySplitViewController.swift */; };
 		5A48AD421FF1D33B0004C87E /* DataPasserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A48AD411FF1D33B0004C87E /* DataPasserController.swift */; };
 		5A48AD441FF1D3F00004C87E /* ArrangemenEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A48AD431FF1D3F00004C87E /* ArrangemenEditorController.swift */; };
@@ -36,6 +37,7 @@
 		5A3C28BE1FE1B62B0073C8E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A3C28C11FE1B62B0073C8E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A3C28C31FE1B62B0073C8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A42A8641FF47E3700EBE13B /* WHRatios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHRatios.swift; sourceTree = "<group>"; };
 		5A43C2361FEDDC4200FD5302 /* MySplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySplitViewController.swift; sourceTree = "<group>"; };
 		5A48AD411FF1D33B0004C87E /* DataPasserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPasserController.swift; sourceTree = "<group>"; };
 		5A48AD431FF1D3F00004C87E /* ArrangemenEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrangemenEditorController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				5A365E511FE2641300B893DD /* RectArranger.swift */,
 				5A3AC97C1FEB93CC00713CCA /* Arrangement.swift */,
 				5A4CBBEA1FF31F9100AE7218 /* FormTags.swift */,
+				5A42A8641FF47E3700EBE13B /* WHRatios.swift */,
 			);
 			path = AutoArrange;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				5A3C28B81FE1B62B0073C8E4 /* AppDelegate.swift in Sources */,
 				5A4CBBEB1FF31F9100AE7218 /* FormTags.swift in Sources */,
 				5A48AD441FF1D3F00004C87E /* ArrangemenEditorController.swift in Sources */,
+				5A42A8651FF47E3700EBE13B /* WHRatios.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
