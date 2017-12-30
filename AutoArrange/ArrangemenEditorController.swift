@@ -7,6 +7,8 @@ class ArrangementEditorController : FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationItem.backBarButtonItem?.title = ""
         
         form +++ Section()
         <<< TextRow(tagName) {
