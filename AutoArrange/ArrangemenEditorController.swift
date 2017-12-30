@@ -53,4 +53,18 @@ class ArrangementEditorController : FormViewController {
     @IBAction func cancel() {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func arrange() {
+        let values = form.values(includeHidden: false)
+        let arrangement = Arrangement()
+        if let name = values[tagName] as? String {
+            arrangement.name = name
+        }
+        if let margin = values[tagMargin] as? Double {
+            arrangement.margin = margin
+        }
+        if let ratio = values[tagWHRatio] as? WHRatios {
+            arrangement.ratio = ratio.ratio
+        }
+    }
 }
