@@ -104,12 +104,38 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Arrange" style="done" id="wYx-CQ-Ha2">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="arrange" destination="51i-FT-4It" id="QE8-Sc-kkg"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="GtF-fU-QRl" kind="show" identifier="showArrangementPreview" id="nq9-2C-BSE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUX-Eq-HP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2844" y="-117"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="d12-Ea-mbf">
+            <objects>
+                <viewController id="GtF-fU-QRl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="piw-cf-dbp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="P2M-nV-oYU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rvR-3S-N20">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="qqh-fY-TQw">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Zu-ZS-ZfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3601" y="-117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JQB-Jh-2FU">
