@@ -66,5 +66,11 @@ class ArrangementEditorController : FormViewController {
         if let ratio = values[tagWHRatio] as? WHRatios {
             arrangement.ratio = ratio.ratio
         }
+        
+        func size(of image: UIImage, scaleFactor: Double) -> CGSize {
+            let scaled = image.size.applying(CGAffineTransform(scaleX: scaleFactor.f, y: scaleFactor.f))
+            return CGSize(width: scaled.width + arrangement.margin.f * 2, height: scaled.height + arrangement.margin.f * 2)
+        }
+        
     }
 }
