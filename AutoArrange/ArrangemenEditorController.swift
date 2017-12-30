@@ -72,5 +72,11 @@ class ArrangementEditorController : FormViewController {
             return CGSize(width: scaled.width + arrangement.margin.f * 2, height: scaled.height + arrangement.margin.f * 2)
         }
         
+        var positionedImages = [PositionedImage]()
+        for (index, image) in images.enumerated() {
+            let scale = values[tagScaleFactor + String(index)] as? Double
+            let imageSize = size(of: image, scaleFactor: scale ?? 1)
+            positionedImages.append(PositionedImage(image: image, rect: CGRect(origin: .zero, size: imageSize), scaleFactor: scale ?? 1))
+        }
     }
 }
