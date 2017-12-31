@@ -4,6 +4,7 @@ import ViewRow
 
 class ArrangementEditorController : FormViewController {
     var images: [UIImage]!
+    var arranger: RectArranger!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +79,9 @@ class ArrangementEditorController : FormViewController {
             let imageSize = size(of: image, scaleFactor: scale ?? 1)
             positionedImages.append(PositionedImage(image: image, rect: CGRect(origin: .zero, size: imageSize), scaleFactor: scale ?? 1))
         }
+        arranger = RectArranger(rects: PositionedImageCollection(images: positionedImages), idealRatio: arrangement.ratio)
+        arranger.delegate = self
+        arranger.arrange()
     }
 }
 
