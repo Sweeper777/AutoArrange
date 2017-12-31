@@ -68,6 +68,7 @@ class RectArranger {
     }
     
     func arrange() {
+        delegate?.rectArranger(didStartArranging: self)
         imagesToBeArranged.images.sort { (a, b) -> Bool in
             let aArea = a.rect.width * a.rect.height
             let bArea = b.rect.width * b.rect.height
@@ -77,15 +78,16 @@ class RectArranger {
         newImage.rect = newImage.rect.with(origin: .zero)
         arrangedImages.images.append(newImage)
         imagesToBeArranged.images.removeFirst()
+        var count = 0
         while !imagesToBeArranged.images.isEmpty {
             let point = minimax(depth: 2).origin
             var newImage = imagesToBeArranged.images.first!
             newImage.rect = newImage.rect.with(origin: point)
             arrangedImages.images.append(newImage)
-            let placedRect = imagesToBeArranged.images.removeFirst()
-            let area = placedRect.rect.width * placedRect.rect.height
-            print("Rect Placed")
-            print("Area: \(area)")
+            imagesToBeArranged.images.removeFirst()
+            count += 1
+            delegate?.rectArranger(didPlaceRect: self, rectCount: count)
         }
+        delegate?.rectArranger(didFinishArrangement: self)
     }
 }
