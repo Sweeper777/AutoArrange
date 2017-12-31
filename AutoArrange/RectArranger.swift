@@ -6,6 +6,8 @@ class RectArranger {
     var arrangedImages = PositionedImageCollection(images: [])
     let idealRatio: Double
     
+    weak var delegate: RectArrangerDelegate?
+    
     init(rects: PositionedImageCollection, idealRatio: Double = 1 / sqrt(2)) {
         self.imagesToBeArranged = rects
         self.idealRatio = idealRatio
