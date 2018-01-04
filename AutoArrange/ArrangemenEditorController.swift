@@ -93,7 +93,9 @@ class ArrangementEditorController : FormViewController {
 
 extension ArrangementEditorController : RectArrangerDelegate {
     func rectArranger(didFinishArrangement arranger: RectArranger) {
+        EZLoadingActivity.hide(true, animated: true)
         
+        performSegue(withIdentifier: "showArrangementPreview", sender: arranger.arrangedImages)
     }
     
     func rectArranger(didPlaceRect arranger: RectArranger, rectCount: Int) {
