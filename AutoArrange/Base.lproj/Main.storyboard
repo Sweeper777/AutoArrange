@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="2844" y="-117"/>
         </scene>
-        <!--View Controller-->
+        <!--Arrangement Preview Controller-->
         <scene sceneID="d12-Ea-mbf">
             <objects>
-                <viewController id="GtF-fU-QRl" sceneMemberID="viewController">
+                <viewController id="GtF-fU-QRl" customClass="ArrangementPreviewController" customModule="AutoArrange" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="piw-cf-dbp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
