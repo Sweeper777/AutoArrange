@@ -20,6 +20,7 @@
 		5A42A8651FF47E3700EBE13B /* WHRatios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A42A8641FF47E3700EBE13B /* WHRatios.swift */; };
 		5A43C2371FEDDC4200FD5302 /* MySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A43C2361FEDDC4200FD5302 /* MySplitViewController.swift */; };
 		5A4601A51FF86D47005C2A6A /* RectArrangerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4601A41FF86D47005C2A6A /* RectArrangerDelegate.swift */; };
+		5A467AF11FF9EAEE00BCB771 /* ArrangementPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A467AF01FF9EAEE00BCB771 /* ArrangementPreviewController.swift */; };
 		5A48AD421FF1D33B0004C87E /* DataPasserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A48AD411FF1D33B0004C87E /* DataPasserController.swift */; };
 		5A48AD441FF1D3F00004C87E /* ArrangemenEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A48AD431FF1D3F00004C87E /* ArrangemenEditorController.swift */; };
 		5A4CBBEB1FF31F9100AE7218 /* FormTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4CBBEA1FF31F9100AE7218 /* FormTags.swift */; };
@@ -41,6 +42,7 @@
 		5A42A8641FF47E3700EBE13B /* WHRatios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHRatios.swift; sourceTree = "<group>"; };
 		5A43C2361FEDDC4200FD5302 /* MySplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySplitViewController.swift; sourceTree = "<group>"; };
 		5A4601A41FF86D47005C2A6A /* RectArrangerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectArrangerDelegate.swift; sourceTree = "<group>"; };
+		5A467AF01FF9EAEE00BCB771 /* ArrangementPreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrangementPreviewController.swift; sourceTree = "<group>"; };
 		5A48AD411FF1D33B0004C87E /* DataPasserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPasserController.swift; sourceTree = "<group>"; };
 		5A48AD431FF1D3F00004C87E /* ArrangemenEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrangemenEditorController.swift; sourceTree = "<group>"; };
 		5A4CBBEA1FF31F9100AE7218 /* FormTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTags.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				5A48AD431FF1D3F00004C87E /* ArrangemenEditorController.swift */,
 				5A43C2361FEDDC4200FD5302 /* MySplitViewController.swift */,
 				5A48AD411FF1D33B0004C87E /* DataPasserController.swift */,
+				5A467AF01FF9EAEE00BCB771 /* ArrangementPreviewController.swift */,
 				5A3C28BB1FE1B62B0073C8E4 /* Main.storyboard */,
 				5A3C28BE1FE1B62B0073C8E4 /* Assets.xcassets */,
 				5A3C28C01FE1B62B0073C8E4 /* LaunchScreen.storyboard */,
@@ -231,11 +234,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-AutoArrange/Pods-AutoArrange-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EZLoadingActivity/EZLoadingActivity.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/KeyboardFrameChangeListener/KeyboardFrameChangeListener.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView-Objective-C/SCLAlertView_Objective_C.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollViewController/ScrollViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollViewKeyboardAvoider/ScrollViewKeyboardAvoider.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/TLPhotoPicker/TLPhotoPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/UIView+draggable/UIView_draggable.framework",
@@ -245,11 +251,14 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZLoadingActivity.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeyboardFrameChangeListener.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView_Objective_C.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollViewKeyboardAvoider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TLPhotoPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIView_draggable.framework",
@@ -271,6 +280,7 @@
 				5A3C28BA1FE1B62B0073C8E4 /* ArrangementsController.swift in Sources */,
 				5A365E521FE2641300B893DD /* RectArranger.swift in Sources */,
 				5A43C2371FEDDC4200FD5302 /* MySplitViewController.swift in Sources */,
+				5A467AF11FF9EAEE00BCB771 /* ArrangementPreviewController.swift in Sources */,
 				5A365E501FE263C300B893DD /* PositionedImageCollection.swift in Sources */,
 				5A3AC97F1FEB95AD00713CCA /* PositionedImage.swift in Sources */,
 				5A48AD421FF1D33B0004C87E /* DataPasserController.swift in Sources */,
@@ -419,7 +429,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E9MW74DJ4Y;
 				INFOPLIST_FILE = AutoArrange/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.AutoArrange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,7 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E9MW74DJ4Y;
 				INFOPLIST_FILE = AutoArrange/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.AutoArrange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
