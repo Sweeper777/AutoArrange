@@ -1,10 +1,12 @@
 import UIKit
 import Eureka
 import ViewRow
+import EZLoadingActivity
 
 class ArrangementEditorController : FormViewController {
     var images: [UIImage]!
     var arranger: RectArranger!
+    var arrangement: Arrangement!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +59,7 @@ class ArrangementEditorController : FormViewController {
     
     @IBAction func arrange() {
         let values = form.values(includeHidden: false)
-        let arrangement = Arrangement()
+        arrangement = Arrangement()
         if let name = values[tagName] as? String {
             arrangement.name = name
         }
