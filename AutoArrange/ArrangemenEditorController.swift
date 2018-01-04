@@ -83,7 +83,11 @@ class ArrangementEditorController : FormViewController {
         }
         arranger = RectArranger(rects: PositionedImageCollection(images: positionedImages), idealRatio: arrangement.ratio)
         arranger.delegate = self
-        arranger.arrange()
+        EZLoadingActivity.show(String.init(format: NSLocalizedString("%@ Images Arranged", comment: ""), 0) , disableUI: true)
+        DispatchQueue.main.async {
+            [weak self] in
+            self?.arranger.arrange()
+        }
     }
 }
 
