@@ -99,10 +99,11 @@ extension ArrangementEditorController : RectArrangerDelegate {
     }
     
     func rectArranger(didPlaceRect arranger: RectArranger, rectCount: Int) {
-        
+        DispatchQueue.main.async {
+            EZLoadingActivity.show(String.init(format: NSLocalizedString("%d Images Arranged", comment: ""), rectCount) , disableUI: true)
+        }
     }
     
     func rectArranger(didStartArranging arranger: RectArranger) {
-        
     }
 }
