@@ -1,6 +1,0 @@
-framework module ScrollViewController {
-  umbrella header "ScrollViewController-umbrella.h"
-
-  export *
-  module * { export * }
-}
