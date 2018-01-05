@@ -89,6 +89,15 @@ class ArrangementEditorController : FormViewController {
             self?.arranger.arrange()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ArrangementPreviewController {
+            let encoder = PropertyListEncoder()
+            encoder.outputFormat = .binary
+            arrangement.imagesData = try! encoder.encode(sender as! PositionedImageCollection)
+            vc.arrangement = arrangement
+        }
+    }
 }
 
 extension ArrangementEditorController : RectArrangerDelegate {
