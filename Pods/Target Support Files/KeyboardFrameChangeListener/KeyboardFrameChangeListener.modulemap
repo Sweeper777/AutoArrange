@@ -1,0 +1,6 @@
+framework module KeyboardFrameChangeListener {
+  umbrella header "KeyboardFrameChangeListener-umbrella.h"
+
+  export *
+  module * { export * }
+}

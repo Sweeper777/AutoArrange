@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.1'
+platform :ios, '10.0'
 
 target 'AutoArrange' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -15,4 +15,5 @@ target 'AutoArrange' do
   pod 'RxCocoa'
   pod 'TLPhotoPicker'
   pod 'ViewRow', :git => 'https://github.com/EurekaCommunity/ViewRow'
+  pod 'ScrollViewController'
 end

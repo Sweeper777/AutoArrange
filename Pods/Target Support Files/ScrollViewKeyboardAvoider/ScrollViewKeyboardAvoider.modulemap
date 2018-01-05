@@ -1,0 +1,6 @@
+framework module ScrollViewKeyboardAvoider {
+  umbrella header "ScrollViewKeyboardAvoider-umbrella.h"
+
+  export *
+  module * { export * }
+}
