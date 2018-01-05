@@ -87,6 +87,7 @@ class RectArranger {
             imagesToBeArranged.images.removeFirst()
             count += 1
             delegate?.rectArranger(didPlaceRect: self, rectCount: count)
+            print("\(count) rects placed")
         }
         delegate?.rectArranger(didFinishArrangement: self)
     }
