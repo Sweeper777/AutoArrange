@@ -15,6 +15,9 @@ class ArrangementPreviewController: UIViewController {
                 width: positionedImage.rect.width - arrangement.margin.f * 2,
                 height: positionedImage.rect.height - arrangement.margin.f * 2)
             let imageView = UIImageView(frame: imageRect)
+            imageView.image = positionedImage.image
+            imageView.contentMode = .scaleAspectFit
+            scrollView.addSubview(imageView)
         }
     }
 }
