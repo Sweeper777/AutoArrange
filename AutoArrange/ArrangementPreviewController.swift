@@ -3,4 +3,6 @@ import ScrollViewController
 
 class ArrangementPreviewController: UIViewController {
     var arrangement: Arrangement!
+    
+    @IBOutlet var scrollView: UIScrollView!
 }
