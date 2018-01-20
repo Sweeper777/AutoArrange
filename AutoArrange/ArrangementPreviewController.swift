@@ -19,5 +19,8 @@ class ArrangementPreviewController: UIViewController {
             imageView.contentMode = .scaleAspectFit
             scrollView.addSubview(imageView)
         }
+        scrollView.contentSize = CGSize(
+            width: imageCollection.map { $0.rect.maxX }.max() ?? 0,
+            height: imageCollection.map { $0.rect.maxY }.max() ?? 0)
     }
 }
